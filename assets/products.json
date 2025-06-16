@@ -8,16 +8,23 @@
   },
   {
     "id": 2,
+    "title": "روغن آرگان",
+    "desc": "برای تقویت سیستم ایمنی بدن",
+    "img": "./assets/images/post1.png",
+    "category": "روغن"
+  },
+  {
+    "id": 3,
+    "title": "روغن سیاه‌دانه",
+    "desc": "برای تقویت سیستم ایمنی بدن",
+    "img": "./assets/images/post1.png",
+    "category": "روغن"
+  },
+  {
+    "id": 4,
     "title": "عرق نعناع",
     "desc": "موثر در درمان نفخ و درد معده",
     "img": "./assets/images/post1.png",
     "category": "عرقیجات"
-  },
-  {
-    "id": 3,
-    "title": "پماد زردچوبه",
-    "desc": "کاهنده التهاب مفاصل و دردهای عضلانی",
-    "img": "./assets/images/post1.png",
-    "category": "پماد"
   }
 ]

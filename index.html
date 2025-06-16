@@ -135,9 +135,23 @@
     let currentCategory = "all";
 
     async function loadProducts() {
+      const cacheKey = "cachedProducts";
+      const cacheTimeKey = "cachedTime";
+      const now = Date.now();
+      const oneDay = 24 * 60 * 60 * 1000;
 
-      const response = await fetch("products.json");
-      products = await response.json();
+      const cachedData = localStorage.getItem(cacheKey);
+      const cachedTime = localStorage.getItem(cacheTimeKey);
+
+      if (cachedData && cachedTime && now - parseInt(cachedTime) < oneDay) {
+        products = JSON.parse(cachedData);
+      } else {
+        const response = await fetch("./assets/products.json?v=" + now);
+        products = await response.json();
+        localStorage.setItem(cacheKey, JSON.stringify(products));
+        localStorage.setItem(cacheTimeKey, now.toString());
+      }
+
       renderSlider();
       renderProducts();
     }
