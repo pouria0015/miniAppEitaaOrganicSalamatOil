@@ -57,6 +57,7 @@
     }
 
     .card img {
+
       width: 100%;
       height: 150px;
       object-fit: cover;
@@ -113,7 +114,7 @@
       <option value="all">همه محصولات</option>
       <option value="روغن">روغن‌ها</option>
       <option value="عرقیجات">عرقیجات</option>
-      <option value="پماد">پمادها</option>
+      <option value="دیگر">دیگر</option>
     </select>
   </div>
 
@@ -138,7 +139,7 @@
       const cacheKey = "cachedProducts";
       const cacheTimeKey = "cachedTime";
       const now = Date.now();
-      const oneDay = 24 * 60 * 60 * 1000;
+      const oneDay = 12 * 60 * 60 * 1000;
 
       const cachedData = localStorage.getItem(cacheKey);
       const cachedTime = localStorage.getItem(cacheTimeKey);
@@ -172,7 +173,7 @@
             <div class="card-content">
               <h3>${p.title}</h3>
               <p>${p.desc}</p>
-              <a class="btn" href="https://eitaa.com/YOUR_CONTACT">سفارش</a>
+              <a class="btn" href="https://eitaa.com/organic_salamat_oil">سفارش</a>
             </div>
           </div>
         `;
@@ -206,7 +207,7 @@
             <img src="${p.img}" alt="${p.title}">
             <div class="card-content">
               <h3>${p.title}</h3>
-              <a class="btn" href="https://eitaa.com/YOUR_CONTACT">سفارش</a>
+              <a class="btn" href="https://eitaa.com/organic_salamat_oil">سفارش</a>
             </div>
           </div>
         `;
